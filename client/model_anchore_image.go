@@ -18,6 +18,7 @@ import (
 type AnchoreImage struct {
 	// A state value for the current status of the analysis progress of the image
 	AnalysisStatus string        `json:"analysis_status,omitempty"`
+	AnalyzedAt     string        `json:"analyzed_at,omitempty"`
 	CreatedAt      time.Time     `json:"created_at,omitempty"`
 	ImageDigest    string        `json:"imageDigest,omitempty"`
 	ImageContent   *ImageContent `json:"image_content,omitempty"`

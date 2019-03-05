@@ -48,35 +48,11 @@ type APIClient struct {
 
 	DefaultApi *DefaultApiService
 
-	EventsApi *EventsApiService
-
-	IdentityApi *IdentityApiService
-
 	ImageContentApi *ImageContentApiService
 
 	ImagesApi *ImagesApiService
 
-	PoliciesApi *PoliciesApiService
-
-	PolicyApi *PolicyApiService
-
-	PolicyEvaluationApi *PolicyEvaluationApiService
-
-	QueriesApi *QueriesApiService
-
 	RegistriesApi *RegistriesApiService
-
-	RepositoryCredentialsApi *RepositoryCredentialsApiService
-
-	ServicesApi *ServicesApiService
-
-	SubscriptionsApi *SubscriptionsApiService
-
-	SummariesApi *SummariesApiService
-
-	SystemApi *SystemApiService
-
-	UserManagementApi *UserManagementApiService
 
 	VulnerabilitiesApi *VulnerabilitiesApiService
 }
@@ -98,21 +74,9 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 
 	// API Services
 	c.DefaultApi = (*DefaultApiService)(&c.common)
-	c.EventsApi = (*EventsApiService)(&c.common)
-	c.IdentityApi = (*IdentityApiService)(&c.common)
 	c.ImageContentApi = (*ImageContentApiService)(&c.common)
 	c.ImagesApi = (*ImagesApiService)(&c.common)
-	c.PoliciesApi = (*PoliciesApiService)(&c.common)
-	c.PolicyApi = (*PolicyApiService)(&c.common)
-	c.PolicyEvaluationApi = (*PolicyEvaluationApiService)(&c.common)
-	c.QueriesApi = (*QueriesApiService)(&c.common)
 	c.RegistriesApi = (*RegistriesApiService)(&c.common)
-	c.RepositoryCredentialsApi = (*RepositoryCredentialsApiService)(&c.common)
-	c.ServicesApi = (*ServicesApiService)(&c.common)
-	c.SubscriptionsApi = (*SubscriptionsApiService)(&c.common)
-	c.SummariesApi = (*SummariesApiService)(&c.common)
-	c.SystemApi = (*SystemApiService)(&c.common)
-	c.UserManagementApi = (*UserManagementApiService)(&c.common)
 	c.VulnerabilitiesApi = (*VulnerabilitiesApiService)(&c.common)
 
 	return c

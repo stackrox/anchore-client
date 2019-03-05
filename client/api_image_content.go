@@ -13,11 +13,12 @@ package client
 import (
 	"context"
 	"fmt"
-	"github.com/antihax/optional"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -258,10 +259,6 @@ ImageContentApiService Get the content of an image by type
 @return ContentPackageResponse
 */
 
-type GetImageContentByTypeImageIdOpts struct {
-	XAnchoreAccount optional.String
-}
-
 func (a *ImageContentApiService) GetImageContentByTypeImageId(ctx context.Context, imageId string, ctype string, localVarOptionals *GetImageContentByTypeImageIdOpts) (ContentPackageResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
@@ -368,10 +365,6 @@ ImageContentApiService Get the content of an image by type files
 @return ContentFilesResponse
 */
 
-type GetImageContentByTypeImageIdFilesOpts struct {
-	XAnchoreAccount optional.String
-}
-
 func (a *ImageContentApiService) GetImageContentByTypeImageIdFiles(ctx context.Context, imageId string, localVarOptionals *GetImageContentByTypeImageIdFilesOpts) (ContentFilesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
@@ -476,10 +469,6 @@ ImageContentApiService Get the content of an image by type java
 
 @return ContentJavaPackageResponse
 */
-
-type GetImageContentByTypeImageIdJavapackageOpts struct {
-	XAnchoreAccount optional.String
-}
 
 func (a *ImageContentApiService) GetImageContentByTypeImageIdJavapackage(ctx context.Context, imageId string, localVarOptionals *GetImageContentByTypeImageIdJavapackageOpts) (ContentJavaPackageResponse, *http.Response, error) {
 	var (

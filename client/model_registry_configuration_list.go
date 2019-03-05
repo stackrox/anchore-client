@@ -11,5 +11,4 @@
 package client
 
 // List of registry configurations
-type RegistryConfigurationList struct {
-}
+type RegistryConfigurationList []RegistryConfiguration

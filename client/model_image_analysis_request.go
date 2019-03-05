@@ -10,17 +10,13 @@
 
 package client
 
-import (
-	"time"
-)
-
 // A request to add an image to be watched and analyzed by the engine. Optionally include the dockerfile content. Either digest or tag must be present
 type ImageAnalysisRequest struct {
 	// Annotations to be associated with the added image in key/value form
 	Annotations *interface{} `json:"annotations,omitempty"`
 	// Optional override of the image creation time, only honored when both tag and digest are also supplied  e.g. 2018-10-17T18:14:00Z
-	CreatedAt time.Time `json:"created_at,omitempty"`
-	// A full pullable digest reference for an image. e.g. docker.io/nginx@sha256:abc123
+	CreatedAt string `json:"created_at,omitempty"`
+	// Digest is the SHA256
 	Digest string `json:"digest,omitempty"`
 	// Content of the dockerfile for the image, if available
 	Dockerfile string `json:"dockerfile,omitempty"`

@@ -10,6 +10,8 @@
 
 package client
 
+type ErrorUnknown struct{}
+
 // Generic wrapper for metadata listings from images
 type MetadataResponse struct {
 	ImageDigest  string        `json:"imageDigest,omitempty"`

@@ -11,5 +11,4 @@
 package client
 
 // A list of Anchore Images
-type AnchoreImageList struct {
-}
+type AnchoreImageList []AnchoreImage
